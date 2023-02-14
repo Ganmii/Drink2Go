@@ -1,1 +1,17 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background: #f8f8f8;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 80ch;
+}

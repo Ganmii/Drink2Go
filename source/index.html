@@ -1,14 +1,367 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="fonts/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ThinItalic.woff2" as="font" type="fonts/woff2" crossorigin="anonymous">
+</head>
+
+<body class="page__body">
+  <header class="header">
+
+    <div class="header__wrapper">
+      <img src="" alt="">
+      <p class="header__text visually-hidden">Интернет-магазин кофейных напитков</p>
+    </div>
+
+    <nav class="main-nav main-nav--nojs">
+      <button class="main-nav__button" type="button"><span class="visually-hidden">Кнопка</span>
+        <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+          <use href="img/icons/stack.svg#burger-open"></use>
+        </svg>
+        <svg class="main-nav__image-close" width="23" height="23" aria-label="Закрыть меню.">
+          <use href="img/icons/stack.svg#burger-close"></use>
+        </svg>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="main-nav__link main-nav__link--active">Главная</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__link" href="#">Каталог</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <p>Декаф Флэт Уайт</p>
+    <p>Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления
+      после тяжёлого рабочего дня</p>
+    <p>295Р</p>
+    <p>225Р</p>
+    <button type="button">Заказать</button>
+  </section>
+
+  <main>
+
+    <section>
+      <h2>Преимущества</h2>
+      <p>Главные причины выбрать Drink2Go</p>
+      <ul>
+        <li>
+          <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+            <use href="img/icons/stack.svg#burger-open"></use>
+          </svg>
+          <p>Скорость</p>
+          <p>Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li>
+          <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+            <use href="img/icons/stack.svg#burger-open"></use>
+          </svg>
+          <p>Удобство</p>
+          <p>Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li>
+          <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+            <use href="img/icons/stack.svg#burger-open"></use>
+          </svg>
+          <p>Бодрость</p>
+          <p>Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li>
+          <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+            <use href="img/icons/stack.svg#burger-open"></use>
+          </svg>
+          <p>Экологичность</p>
+          <p>Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
+
+    <div>
+      <section>
+        <h2>Каталог</h2>
+        <p>Каталог кофейных напитков</p>
+        <p>Цена</p>
+        <label>
+          <input type="range">
+        </label>
+        <label>
+          <input type="number">
+        </label>
+
+        <label>
+          <input type="number">
+        </label>
+      </section>
+
+      <section>
+        <h2>Наличие молока</h2>
+        <label>
+          <input type="radio">Неважно
+        </label>
+        <label>
+          <input type="radio">Только животное
+        </label>
+        <label>
+          <input type="radio">Только растительное
+        </label>
+        <label>
+          <input type="radio" disabled>Без молока
+        </label>
+      </section>
+
+      <section>
+        <h2>Страна произрастания</h2>
+        <label>
+          <input type="checkbox">Бразилия
+        </label>
+        <label>
+          <input type="checkbox">Эфиопия
+        </label>
+        <label>
+          <input type="checkbox">Колумбия
+        </label>
+        <label>
+          <input type="checkbox">Коста-Рика
+        </label>
+        <label>
+          <input type="checkbox" disabled>Перу
+        </label>
+      </section>
+      <button type="button">Приминить фильтр</button>
+      <button type="reset">сбросить фильтр</button>
+    </div>
+
+    <section>
+      <div>
+        <p>Сортировка:</p>
+        <select>
+          <option>по умолчанию</option>
+          <option>сначала дорогие</option>
+          <option>сначала дешёвые</option>
+          <option>высокий рейтинг</option>
+        </select>
+      </div>
+
+      <ul>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p>Декаф Флэт Уайт</p>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <p>225р</p>
+          <button type="button">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>В корзину
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <div class="pagination">
+      <ul class="pagination-list">
+        <li class="pagination-item">
+          <a class="pagination-link">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>Назад
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>Вперед
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>
+      <img src="" alt="">
+
+      <section>
+        <img src="" alt="">
+        <ul>
+          <li>
+            <a href="#">
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Интернет магазин</h2>
+      <ul>
+        <li>Каталог</li>
+        <li>Доставка</li>
+        <li>Способы оплаты</li>
+        <li>О нас</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Медиа</h2>
+      <ul>
+        <li>Блог</li>
+        <li>Информация для сми</li>
+        <li>Правовая информация</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Контакты</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>Санкт-Петербург, набережная реки Карповки, дом 5
+          </a>
+        </li>
+        <li>
+          <a href="tel:+79999999999">
+            <span>
+              <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+                <use href="img/icons/stack.svg#burger-open"></use>
+              </svg>
+            </span>+7 (999) 999-99-99
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="">Разработано в HTML Academy
+        <span>
+          <svg class="main-nav__image-open" width="23" height="22" aria-label="Открыть меню.">
+            <use href="img/icons/stack.svg#burger-open"></use>
+          </svg>
+        </span>
+      </a>
+    </section>
+
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>
